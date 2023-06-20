@@ -1,0 +1,392 @@
+*{/* Reseteo, sirve para que el css tome siempre el tamaño que yo le digo. Se pone siempre al principio del css. El box sizing es que la caja se mantenga siempre en lo que yo le estoy diciendo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+.contenedortotal{
+    display: grid; /* LO PRIMERO QUE SE PONE DISPLAY GRID. DESPUES HAY QUE INDICAR LA CANTIDAD DE COLUMNAS Y FILAS QUE QUEREMOS QUE TENGA EL SITIO*/
+    grid-template-columns: repeat(2, 1fr); /* aca van las medidsa de las columnas,osea 2 REPEAT sirve para no repetir un valor muchas veces "repeat(12, 1fr)"*/ 
+    background-color: gainsboro;
+    grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.1fr ; /* aca van las medidsa de las filas,osea 5  100px 200px 300px 300px 100px*/
+    grid-template-areas: /* escribimos nuestra area. Hay que llamar a estos hijos y ponerles*/
+    "titulo titulo" /* podemos poner "titulo none" pra indicar que el titulo solo este de un lado*/
+    "menu menu"
+    "main main"
+    "galeria contacto"
+    "footer footer"
+    
+/*Liga Profesional*/
+
+
+}
+.header{
+    grid-area: menu;
+    background-color: gainsboro;
+ }
+.nosotros{
+    grid-area: main;
+}
+.contacto{
+    grid-area: contacto;
+}
+.footer{
+    grid-area: footer;
+    background-color: red;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: repeat(3, 200px);
+    background-color: gray;
+    width: 100%;
+    height: 700px;
+    justify-items: center ;    /* pueden ser start center end y strech*/
+    align-items: center;       /* pueden ser start center end y strech, para que funcione el strech no tienen que tener altura height*/
+    justify-content: center;    /* justify content mueve todo el contenido, las opciones son start end center strech, space arround space between y space everly EL PADRE TIENE QUE TENER UN ANCHO SI O SI*/
+    align-content: center; /*  mueve todo el contenido, las opciones son start end center strech, space arround space between y space everly EL PADRE TIENE QUE TENER UN ANCHO SI O SI*/
+    /*JUSTIFY ES MOVER HORIZONTAMENTE Y ALAIG ES VERTICALMENTE, 
+    JUSTIFY ITEMS MUEVE LOS ITEMS/HIJOS
+    JUSTIFY CONTENT MUEVE EL CONTENIDO
+    ALIGN MUEVE VERTIVALEMNTE
+    ALIGN ITEMS MUEVE LOS ITEMS/HIJOS
+    ALIGN CONTENT MUEVE EL CONTENIDO*/
+}
+.grid div{
+    background-color: crimson;
+    border: 2px solid black;
+    height: 100px;
+}
+.hijorebelde{
+    justify-self: stretch; /* se mueve este solo pUEDE SER CENTER START END STRECH. PUEDE SERVIR PARA GALERIA DE FOTOS CON DISTINTOS TAMAÑOS*/
+    align-self: end;
+}
+
+    /*Copa Libertadores
+    
+    Todas las imagenes de background y posicion center*/
+
+
+
+.contenedorgaleria{
+    display: grid;
+    grid-template-columns: repeat(5,200px);
+    grid-template-rows: repeat(3,200px);
+    gap: 10px 10px;
+    grid-template-areas: "imagen1 imagen1 imagen1 imagen1 imagen2"
+                         "imagen3 imagen3 imagen6 imagen5 imagen5"
+                         "imagen3 imagen3 imagen6 imagen4 imagen4";
+    justify-content: center;
+    padding: 50px;
+}
+.divimagen{
+    background-color: gainsboro;
+}
+.imagen1{
+    grid-area: imagen1;
+    background-image: url(../imagenes/imagen1.jpeg);
+    background-size: auto;
+   
+
+}
+
+.imagen2{
+    grid-area: imagen2;
+    background-image:url(../imagenes/imagen2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen3{
+    grid-area: imagen3;
+    background-image: url(../imagenes/imagen3.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen4{
+    grid-area: imagen4;
+    background-image: url(../imagenes/imagen4.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen5{
+    grid-area: imagen5;
+    background-image: url(../imagenes/imagen5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen6{
+    grid-area: imagen6;
+    background-image: url(../imagenes/imagen6.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*PRODUCTOS
+DISEÑO RESPONSIVE
+El sitio se va a adaptar a la tablet y a el celular
+MEDIA QUERIS, las media queris nos vana apermitir adaptar nuestro sitio.Son condiciones que le vamos a estar diciendo a nuestro diseño. Cuando llegue a tal cantidad de px hace una cosa u otro. IMPORTANTE: NO SE REPITE CODIGO, SE PONE LOQUE VA A CAMBIAR O IGNORAR EL NAVEGADOR. empiezan con @
+MIN WIDTH
+MAX WIDTH
+Se pueden sumar sas medidas, para generar condiciones. Cuando se ponen dos rangos, el AND va en el medio
+ORIENTATION LANSCAPE si queremos girar el celular
+ENFOQUE MOBILE FIRST
+*/
+/*Copa Argentina*/
+.body--productos{
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (1fr);
+    grid-template-areas:
+    "header main footer";
+}
+.header--productos{
+    grid-area: header;
+    background-color: aqua;
+}
+.main--productos{
+    grid-area: main;
+    background-color: blueviolet;
+}
+.footer--productos {
+    grid-area: footer;
+    background-color: chartreuse;
+}
+
+
+/*TABLET*/
+
+@media  screen and (max-width:760px) {
+    .body--productos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "header main"
+        "footer footer";
+    }
+    
+}
+.header--productos{
+    background-color: seagreen;
+}
+.imagen--main{
+    width: 500px;
+}
+
+/*CELULAR*/
+@media screen and (max-width: 500px){
+    .body--productos{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0,2fr 1fr 0,3fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    .header--productos{
+        background-color: darkcyan;
+    }
+
+    .imagen--main{
+        width: 200px;
+    }
+    
+}
+
+/*INDEX
+MOBILE FIRST
+SE USA MEDIA QUERIS CON MIN WIDTH*/
+
+/*NOSOTROS CONVINANDO GRID FLE Y MEDIA*/
+.contenedor1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 4fr 4fr 1fr ;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "main main"
+    "footer footer"
+
+
+}
+
+.d-block{
+    width: 300px;
+    height: 600px;
+}
+.w-100{
+    width: 600px;
+    height: 300px;}
+
+.headernosotros {
+    grid-area: header;
+    background-color: grey;
+   
+
+}
+
+
+.headernosotros ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.headernosotros ul li{
+    list-style-type: none;
+}
+.headernosotros ul li a {text-decoration: none;
+}
+
+.main1{ 
+    grid-area: main;
+    background-color: gainsboro;
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.d-block w-100{
+    width: 700;
+    height: 700;
+}
+
+.footer1{
+    grid-area: footer;
+    background-color: red;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.imagenmain1{
+    width: 250px;
+    height: 250px;
+}
+.imagenfooter1{
+    width:50px ;
+    height: 50px;
+}
+@media screen and (max-width:500px) {.contenedor1
+{grid-template-columns: 1fr;
+    grid-template-rows: 0,4fr 0,5fr 0,1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main"
+    "footer";
+}
+.headernosotros ul {
+    flex-direction: column;
+    text-align: center;
+
+}
+.headernosotros ul li{
+    padding: 5px;
+}
+
+.main1{
+    flex-wrap: wrap;
+
+}
+.footer1{
+    flex-direction: column;
+    justify-content:center ;
+}
+
+}
+@media screen and (max-width:768px) {.contenedor1
+    {grid-template-columns: 1fr ;
+        grid-template-rows: 0,4fr 0,5fr 0,6fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "main "
+        "footer";
+    }
+    .headernosotros ul {
+        flex-direction: column;
+        text-align: center;
+    
+    }
+    .headernosotros ul li{
+        padding: 5px;
+    }
+    
+    .main1{
+        flex-wrap: wrap;
+    }
+    .footer1{
+        flex-direction: column;
+        justify-content:space-around ;
+    }
+    
+    }
+    /* PSEUDOCLASES 
+    palbra clave que añade a los selectores y que especifica un estado especial del elemento seleccionado
+    
+    :hover 
+    No funciona para tablet y celular porque no tenemos mouse
+    PARA QUE FUNCIONE EN TABLET O CELULAR tienen que mantener apretado SIRVE PAR ANIMACKONES DE ESCRITORIO
+    PARA CELULAR O TABLET SACAR DE RESPONSIVE*/
+    li:hover{font-size: 25px;
+    background-color: red;
+color: white ;}
+    a:link{text-decoration: none;
+    color: white;} /*no fueron visitados*/
+
+    a:visited{ color: white;}
+    a:active{
+        color: red;
+        background-color: black;
+        font-weight: bolder;
+    }
+
+   /* CONTACTO PSEUDOCLASES 
+    Para FORM, focus y checkbox
+    */
+   /* input:focus{
+        height: 50px;
+        color: blueviolet;
+    }
+    /* Quienes somos se va a llamar contacto*/
+    .gracias {
+        display: none;
+      }
+
+      /*BEM 
+      es para dar nombres a las clases cuando trabajamos con varias personas. es para BLOQUES ELEMENTOS YMODIFICADORES
+      div section article ul ol que contienen elementos que serian los hijos, seria un NAV QUE TIENE UN UL por ejemplo, y cada uno de estos puede tener modificadofes o no
+      
+      LIBRERIA Y FRAMEWORK, es mas completo que la libreria, el mas conocido es boostrap
+      BOOTSTRAP, es un framework creado por tweter
+      .CONTEINER .ROW .COL
+      CONTEINER los contenedores son bloques que vana contener toda la pagina, pueden tener un ancho variable dependiendo de la resolucion de pantalla del usuario
+      CONTAINER
+      CONTAINERFLUID*/
+
+      /*Copa Argentina*/
+    
+    .contenedorcopaargentina{
+        display: grid;
+
+      
+
+        justify-content: center;
+        padding: 50px;
+    }
+
+
+
+    
+/* sass pasa por un compilador y se transforma en css puro, permite trabajr con un codigo limpio facil de mantener y de editar, con una estrucutra mas ordenanada en los estilos
+hojas de estilo para las cosas dentro del css, permite crear las hojas de estilo con una estructura mas facil de mantener en el futuro y mas optimo porque le vamos a incorporar mucho contenido semantico
+Tambien la incoporacion como por ejemplo de java, sintaxis mas simple y separar el css en mini hojas para que desp todas se compilen en una hoja madre

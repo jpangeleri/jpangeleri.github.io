@@ -1,0 +1,17 @@
+{
+  "name": "coderclase4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "g": "^2.0.1",
+    "sass": "^1.62.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}

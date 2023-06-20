@@ -1,0 +1,349 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+    .contenedortotal{
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr); 
+        background-color: gainsboro;
+        grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.1fr ; 
+        grid-template-areas: 
+        "titulo titulo" 
+        "menu menu"
+        "main main"
+        "galeria contacto"
+        "footer footer" 
+        }
+        /*Liga Profesional*/
+
+.header{
+    grid-area: menu;
+    background-color: gainsboro;
+ }
+.nosotros{
+    grid-area: main;
+}
+.contacto{
+    grid-area: contacto;
+}
+.footer{
+    grid-area: footer;
+    background-color: red;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    grid-template-rows: repeat(3, 200px);
+    background-color: gray;
+    width: 100%;
+    height: 700px;
+    justify-items: center ;    
+    align-items: center;       
+    justify-content: center;    
+    align-content: center; 
+}
+.grid div{
+    background-color: crimson;
+    border: 2px solid black;
+    height: 100px;
+}
+.hijorebelde{
+    justify-self: stretch; 
+    align-self: end;
+}
+
+ /*Copa Libertadores*/
+    
+
+    .contenedorgaleria{
+        display: grid;
+        grid-template-columns: repeat(5,200px);
+        grid-template-rows: repeat(3,200px);
+        gap: 10px 10px;
+        grid-template-areas: "imagen1 imagen1 imagen1 imagen1 imagen2"
+                             "imagen3 imagen3 imagen6 imagen5 imagen5"
+                             "imagen3 imagen3 imagen6 imagen4 imagen4";
+        justify-content: center;
+        padding: 50px;
+    }
+    .divimagen{
+        background-color: gainsboro;
+    }
+    .imagen1{
+        grid-area: imagen1;
+        background-image: url(../imagenes/imagen1.jpeg);
+        background-size: auto;
+       
+    
+    }
+    
+    .imagen2{
+        grid-area: imagen2;
+        background-image:url(../imagenes/imagen2.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .imagen3{
+        grid-area: imagen3;
+        background-image: url(../imagenes/imagen3.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .imagen4{
+        grid-area: imagen4;
+        background-image: url(../imagenes/imagen4.webp);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .imagen5{
+        grid-area: imagen5;
+        background-image: url(../imagenes/imagen5.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .imagen6{
+        grid-area: imagen6;
+        background-image: url(../imagenes/imagen6.jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    /*Copa Argentina*/
+.body--productos{
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (1fr);
+    grid-template-areas:
+    "header main footer";
+}
+
+
+
+/*TABLET*/
+
+@media  screen and (max-width:760px) {
+    .body--productos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "header main"
+        "footer footer";
+    }
+    
+}
+.header--productos{
+    background-color: seagreen;
+}
+.imagen--main{
+    width: 500px;
+}
+
+/*CELULAR*/
+@media screen and (max-width: 500px){
+    .body--productos{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0,2fr 1fr 0,3fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    .header--productos{
+        background-color: darkcyan;
+    }
+
+    .imagen--main{
+        width: 200px;
+    }
+    
+}
+/*INDEX
+MOBILE FIRST
+SE USA MEDIA QUERIS CON MIN WIDTH*/
+
+/*NOSOTROS CONVINANDO GRID FLE Y MEDIA*/
+.contenedor1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 4fr 4fr 1fr ;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "main main"
+    "footer footer"
+    /* a {
+        width: 25px;
+        height: 25px;
+      } */
+
+
+      
+}
+
+.d-block{
+    width: 300px;
+    height: 600px;
+}
+.w-100{
+    width: 600px;
+    height: 300px;}
+
+.headernosotros {
+    grid-area: header;
+    background-color: grey;
+   
+
+}
+.headernosotros {
+    grid-area: header;
+    background-color: grey;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 25px;
+        li {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
+.main1{ 
+    grid-area: main;
+    background-color: gainsboro;
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.d-block w-100{
+    width: 700;
+    height: 700;
+}
+
+.footer1{
+    grid-area: footer;
+    background-color: red;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.imagenmain1{
+    width: 250px;
+    height: 250px;
+    transition: height 3s; 
+    &:hover{
+        height: 500px;
+    }
+    
+}
+.imagenfooter1{
+    width:50px ;
+    height: 50px;
+     }
+
+@media screen and (max-width:500px) {.contenedor1
+{grid-template-columns: 1fr;
+    grid-template-rows: 0,4fr 0,5fr 0,1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main"
+    "footer";
+}
+.headernosotros ul {
+    flex-direction: column;
+    text-align: center;
+
+}
+.headernosotros ul li{
+    padding: 5px;
+}
+
+.main1{
+    flex-wrap: wrap;
+
+}
+.footer1{
+    flex-direction: column;
+    justify-content:center ;
+}
+
+}
+@media screen and (max-width:768px) {.contenedor1
+    {grid-template-columns: 1fr ;
+        grid-template-rows: 0,4fr 0,5fr 0,6fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "main "
+        "footer";
+    }
+    .headernosotros ul {
+        flex-direction: column;
+        text-align: center;
+    
+    }
+    .headernosotros ul li{
+        padding: 5px;
+    }
+    
+    .main1{
+        flex-wrap: wrap;
+    }
+    .footer1{
+        flex-direction: column;
+        justify-content:space-around ;
+    }
+    
+    }
+
+    li:hover{font-size: 25px;
+        background-color: red;
+    color: white ;}
+        a:link{text-decoration: none;
+        color: white;}
+
+        a:visited{ color: white;}
+    a:active{
+        color: red;
+        background-color: black;
+        font-weight: bolder;
+    }
+    .contenedorcopaargentina{
+        display: grid;
+
+      
+
+        justify-content: center;
+        padding: 50px;
+    }
+    /*Quienes somos*/
+    .quienessomos {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+        .textoquienessomos{ padding-left: 20px;
+            padding-right: 20px;
+         
+
+    }
+    
+
+    }
+

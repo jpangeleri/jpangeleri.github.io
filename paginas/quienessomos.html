@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo River</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- meta description-->
+    <meta name="description" content="Pagina dedicada al Club Atletico River Plate. Actualidad, resultados e información personal">
+
+    <!-- keywords-->
+    <meta name="keywords" content="River, River Plate, Desarrollo web, Copa Libertadores, Copa Argentina, Liga Profesional, Futbol">
+</head>
+
+<body>
+
+    <header class="headernosotros">
+        <h1 class="h1">Quienes somos</h1> <!-- Título de la página-->
+        <nav> <!-- Navegador dentro del header-->
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="copalibertadores.html">Copa Libertadores</a></li>
+                <li><a href="../paginas/copaargentina.html">Copa Argentina</a></li>
+                <li><a href="../paginas/ligaprofesional.html">Liga Profesional</a></li>
+                <li><a href="../paginas/quienessomos.html"> Quienes somos</a></li>
+            </ul>
+        </nav>
+    </header>
+<section class="quienessomos"> <!-- Seccíon en la que cuento brevemente quien soy-->
+    <article>
+        <h2>Quien soy</h2>
+        <p class="textoquienessomos"> Mi nombre es Juan Pablo Angeleri y soy socio de River desde el año 99. Fui a la escuela del club, donde hice primario y secundario. Jugue al futbol para el colegio y posteriormente al basquet  y al handball para el club de manera federada. El tiempo y las lesiones me alejaron del deporte federado pero continue yendo al club, al gimnasio, la pileta y a comer un asado de vez en cuando. En las buenas y en las malas siempre alentando a River Plate. </p>
+        <div class="main1">
+        <div id="carouselExampleCaptions" class="carousel slide"> <!-- Carousel con breve descripción-->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/quien soy1.jpg" class="d-block w-100" alt="Equipo del colegio">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Instituto River Plate futbol</h5>
+                  <p>Tercer grado del colegio. Jugamos en las canchas que estan atras en el Club.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/quien soy2.jpg" class="d-block w-100" alt="Juan Pablo de bebé">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>De River se nace</h5>
+                  <p>Con mi primera camiseta, siguiendo el mandato familiar desde chico.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/quien soy3.jpg" class="d-block w-100" alt="En la cancha con mis primos">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>En la tribuna</h5>
+                  <p>Año 2019, En un partido de local por el campeonato.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/quien soy4.jpg" class="d-block w-100" alt="Jugador de basquet">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Jugador de basquet</h5>
+                  <p>Uno de los deportes que practique en el club fue el basquet.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </article>
+
+    <article class="container">
+      <div class="formularioquienessomos">
+      <form>
+        <br>
+        <div class="col-lg-5">
+            <label for="exampleInputPassword1" class="form-label" >Nombre y apellido</label>
+            <input type="Nombre y apellido" class="form-control" id="Nombre y apellido" placeholder="Nombre y Apellido">
+          </div>
+        <div class="col-lg-5">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Mail" aria-describedby="emailHelp">
+        </div>
+        <div class="col-lg-2">
+          <label for="exampleInputPassword1" class="form-label">Celular</label>
+          <input type="Celular" class="form-control" id="exampleInputPassword1" placeholder="Celular">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-danger">Contactar</button>
+        <hr>
+      </form>
+    </div>
+    </article>
+    
+</section>
+  
+    <footer class="footer1"> <!-- Pie de página-->
+      <img src="../imagenes/Escudo_del_C_A_River_Plate.svg.png" class="imagenfooter1">
+        <p>&copy; Proyecto realizado para el curso de Desarrollo Web en Coderhouse</p> 
+    </footer>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>   
+</body>
+</html>
